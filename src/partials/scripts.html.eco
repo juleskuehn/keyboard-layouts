@@ -1,4 +1,1 @@
-
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<%- @getBlock("scripts").add(["/scripts.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["vendor/jquery.min.js","vendor/bililiteRange.js","assets/keypress.js","assets/keyboard.js"]).toHTML() %>

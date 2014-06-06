@@ -2,7 +2,6 @@
 title: "Keyboard Layouts"
 layout: "post"
 ---
-
 <div id="keyStuff">
 	<div id="keyboard"></div>
 	<br />
@@ -74,8 +73,4 @@ layout: "post"
 	</select>
 	<textarea id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
 </div>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="../assets/keypress.js"></script>
-<script src="/vendor/bililiteRange.js"></script>
-<script type="text/javascript" src="../assets/keyboard.js"></script>
-<link rel="stylesheet" href="../assets/keyboard.css" type="text/css" />
+<link rel="stylesheet" href="assets/keyboard.css" type="text/css" />

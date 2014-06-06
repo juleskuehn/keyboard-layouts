@@ -1,7 +1,6 @@
 ---
 title: "Keyboard Layouts"
 layout: "post"
-date: 2014-06-03
 ---
 
 <div id="keyStuff">
@@ -80,15 +79,3 @@ date: 2014-06-03
 <script src="/vendor/bililiteRange.js"></script>
 <script type="text/javascript" src="../assets/keyboard.js"></script>
 <link rel="stylesheet" href="../assets/keyboard.css" type="text/css" />
-
-##Background
-
-I grew up using QWERTY, typing 100 words per minute with accuracy.  Repetitive strain injury (aka *carpal tunnel syndrome*) forced me to search for an ergonomic alternative.  I settled on [Colemak](http://colemak.com/), a partially optimized layout that emphasises ease of transition from QWERTY and maintains the positions of common shortcut keys (ZXCV).
-
-##Hard vs. soft layouts
-
-The layouts you can try here are examples of **soft layouts** - that is, they map the keycodes sent by your keyboard to specific characters.  An example of a hard layout would be the keyboard you are using.  The ANSI hard layout is shown above as a point of reference for the various soft layouts imposed on it here.
-
-Alternative hard layouts provide ergonomic benefits beyond the keymapping provided by soft layouts such as Colemak, but the effectiveness of a hard layout is tied to the soft layout imposed on it, and vice-versa.  The [Maltron](http://www.maltron.com/) keyboard layout incorporates both a physical (hard) layout and a soft layout.
-
-Since hard layouts cannot be emulated in software, you will have to acquire a different keyboard to try it.

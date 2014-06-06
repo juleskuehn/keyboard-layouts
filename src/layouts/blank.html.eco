@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title><%= @document.title %> | Mike Kuehn</title>
+    <%- @getBlock("meta").toHTML() %>
+	<%- @getBlock("styles").add(["/style.css"]).toHTML() %>
+	<link rel="shortcut icon" href="/images/me.jpg" />
+</head>
+<body>
+	
+	<!-- Content -->
+	<%- @content %>
+
+	<h3><a href="/" id="home" style="float:left">Back...</a></h3>
+	
+	<%- @getBlock("scripts").add(["/vendor/jquery.min.js","/scripts.js"]).toHTML() %>
+</body>
+</html>

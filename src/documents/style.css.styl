@@ -1,0 +1,269 @@
+@import 'nib'
+
+// reset
+
+global-reset()
+
+header, nav, section, article, aside, footer
+	display block
+
+// rem fallback handled in /src/partials/scripts.html.eco
+
+// colors
+
+red = #ac2424
+green = #0b8800
+blue = #172bae
+black = #222
+lightBlack = #333
+lightGrey = #aaa
+
+// base sizes
+
+html
+	font-size 100%
+	
+	@media screen and (min-width:1024px)
+		font-size 114%
+
+	@media screen and (min-width:1440px)
+		font-size 126.7%
+
+	@media screen and (min-width:1800px)
+		font-size 143%
+
+	@media screen and (min-width:2500px)
+		font-size 190%
+
+lineH = 1.45rem
+
+// basic type styles
+
+body 
+	background white
+	padding 1.5*lineH lineH*0.5
+	line-height lineH
+	font-size 0.9rem
+	font-family "Open Sans", "Segoe UI", "Frutiger Next", Frutiger, "Lucida Grande", sans-serif
+	font-weight 400
+	color black
+	margin auto
+	position relative
+	max-width 36rem
+
+	@media screen and (min-width:768px)
+		padding 3*lineH 0
+	
+	&.grid
+		background url("/images/bg-21.png")
+		background-size lineH lineH 
+
+p
+	margin-bottom lineH
+	// nudge
+	position relative
+	top 0.2em
+
+a 
+	color blue
+	text-decoration none
+	&:visited
+		color green
+	&:active
+		color red
+	&:hover
+		text-decoration underline
+
+strong
+	font-weight 600
+	color lightBlack
+
+em
+	font-style italic
+
+h1,h2,h3,h4,h5,h6 
+	font-weight 600
+	font-size 1rem
+	color lightBlack
+
+#title
+	font-size 2rem
+	line-height 1.5*lineH
+	// nudge
+	margin-top 0.25rem
+	margin-bottom -0.25rem
+	text-indent -0.1rem
+	letter-spacing -0.066rem
+	font-weight 700
+	color lightBlack
+	position relative
+	*
+		text-indent 0.1rem
+
+h2 
+	font-size 1.4rem
+	line-height lineH
+	// nudge
+	margin-top 2.84rem
+	margin-bottom 1.285rem
+	text-indent -0.03rem
+	color red
+	font-weight 300
+
+h3
+	font-size 1.0rem
+	line-height lineH
+	// nudge
+	margin-top 1.55rem
+	margin-bottom -0.175rem
+	font-weight 600
+
+ul 
+	margin-bottom 2*lineH
+
+li 
+	list-style circle
+	margin-left 1.7rem
+	position relative
+	top 0.2rem
+
+time
+	color lightGrey
+	padding-bottom lineH
+	display block
+
+img
+	float right
+	width 13rem
+	max-width 40%
+	padding 0 0 lineH*0.5 lineH*0.5
+	margin-top 0.2rem
+	
+	@media screen and (max-width:480px)
+		width 100%
+		max-width none
+		padding-right 0
+
+// title image
+
+#title div.imgwrapper
+	height 3.2*lineH
+	width 3.2*lineH
+	border-radius 1.6*lineH
+	overflow hidden
+	float right
+	// box-shadow inset 5px 5px 10px -3px rgba(0,0,0,0.3)
+	position absolute
+	top 50%
+	right 0
+	margin 0
+	margin-top -1.6*lineH
+
+	img
+		height 5rem
+		width auto
+		max-width none
+		position absolute
+		top 50%
+		left 50%
+		transform translateY(-50%) translateX(-50%)
+		z-index -1
+		padding 0
+		margin 0
+
+#title div.imgpadding
+	float right
+	width 3.4*lineH
+	height 3.4*lineH
+
+#title div.imgpadding,
+#title div.imgwrapper
+	@media screen and (max-width:359px)
+		display none
+
+
+// post list & collapsing sections
+
+#post-list
+	margin-top 3.9rem
+
+#post-list li
+	list-style none
+	margin 0
+
+#post-list li a
+	margin 0
+	top -1px
+	font-size 1.3rem
+	text-decoration none !important
+	display block
+	position relative
+	padding 0.5*lineH 0
+	padding-right lineH
+	border-top solid 1px #ddd
+	margin-bottom -1px
+	cursor pointer
+	font-weight 300
+	color #000
+
+#post-list li:last-of-type::after
+	content ""
+	display block
+	border-top solid 1px #ddd
+	height 1px
+	margin-bottom -1px
+	top -1px
+	position relative
+
+#post-list span.date
+	color lightGrey
+	font-size 1rem
+	font-weight 300
+	display none
+
+#post-list i
+	position absolute
+	right 0
+	top 50%
+	margin-top -1.05rem
+	font-size 2rem
+	color #ddd
+	opacity 1
+
+#post-list li a:hover,
+#post-list li a:hover i
+	color blue
+
+#post-list li a:visited:hover,
+#post-list li a:visited:hover i
+	color green
+
+#post-list li a:active,
+#post-list li a:active i
+	color red !important
+
+#post-list li a:hover i
+	opacity 0.5
+
+// fun but useless
+
+#colors
+	position absolute
+	top -5px
+	opacity 0
+
+#grid,#green,#red
+	display inline-block !important
+	cursor pointer
+	width 24px
+	height 10px
+	background blue
+
+#green
+	background green
+
+#red
+	background red
+
+::selection
+	background #ffffaa

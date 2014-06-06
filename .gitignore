@@ -1,0 +1,4 @@
+out/
+node_modules/
+src/documents/node_modules/
+*.swp

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title><%- @document.title %> | Mike Kuehn</title>
+	<%- @partial('headNoTitle') %>
+</head>
+<body class='post'>
+
+	<%- @partial('contents') %>
+	<%- @partial('scripts') %>
+
+</body>
+</html>

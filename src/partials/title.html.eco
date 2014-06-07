@@ -1,0 +1,15 @@
+	<h1 id="title">
+		<% if @document.img: %>
+			<div class="imgwrapper">
+				<img src="<%- @document.img %>" alt="" />
+			</div>
+			<div class="imgpadding"></div>
+		<% end %>
+		<%- @document.title %>
+	</h1>
+
+	<p>
+		<time>
+			<%- @moment(@document.date).format('MMMM D, YYYY') %>
+		</time>
+	</p>

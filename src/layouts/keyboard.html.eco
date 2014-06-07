@@ -5,6 +5,7 @@
 	<%- @partial('headNoTitle') %>
 </head>
 <body>
+	<%- @partial('title') %>
 	<div id="keyStuff">
 		<div id="keyboard"></div>
 		<br />

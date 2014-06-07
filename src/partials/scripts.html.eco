@@ -1,1 +1,1 @@
-<%- @getBlock("scripts").add(["vendor/jquery.min.js","vendor/bililiteRange.js","assets/keypress.js","assets/keyboard.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["vendor/all.min.js","scripts.js"]).toHTML() %>

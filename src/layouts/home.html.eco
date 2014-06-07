@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Mike Kuehn | Home</title>
+	<title>Index</title>
 	<%- @partial('headNoTitle') %>
 </head>
 <body class='home'>

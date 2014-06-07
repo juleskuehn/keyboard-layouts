@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Try Keyboard Layouts in Browser</title>
+	<%- @partial('headNoTitle') %>
+</head>
+<body>
+	<div id="keyStuff">
+		<div id="keyboard"></div>
+		<br />
+		<label>Your keyboard layout:</label>
+		<select id="source">
+			<option value="qwerty" selected>QWERTY</option>
+			<option value="azerty">AZERTY</option>
+			<option value="dvorak">Dvorak</option>
+			<option value="pdvorak">Programmer Dvorak</option>
+			<option value="colemak">Colemak</option>
+			<option value="bepo">bépo</option>
+			<option value="workman">Workman</option>
+			<option value="norman">Norman</option>
+			<option value="arensito">Arensito Simple</option>
+			<option value="qwpr">qwpr</option>
+			<option value="asset">Asset</option>
+			<option value="mtgap2">MTGAP 2.0</option>
+			<option value="klausler">Klauser's evolver</option>
+			<option value="capewell">Capewell</option>
+			<option value="cqwerf">Capewell-QWERF</option>
+			<option value="cdvorak">Capewell-Dvorak</option>
+			<option value="minimak4">Minimak 4</option>
+			<option value="minimak8">Minimak 8</option>
+			<option value="minimak12">Minimak 12</option>
+			<option value="tarmak1">Tarmak 1</option>
+			<option value="tarmak2">Tarmak 2</option>
+			<option value="tarmak3">Tarmak 3</option>
+			<option value="tarmak4">Tarmak 4</option>
+			<option value="qfmlwy">Carpalx QFMLWY</option>
+			<option value="qgmlwb">Carpalx QGMLWB</option>
+			<option value="qgmlwy">Carpalx QGMLWY</option>
+			<option value="qwkrfy">Carpalx QWKRFY</option>
+			<option value="qwyrfm">Carpalx QWYRFM</option>
+			<option value="carpalxq">CarpalxQ</option>
+			<option value="tnwmlc">Carpalx TNWMLC</option>
+		</select>
+		<label>Try this layout (above):</label>
+		<select id="target">
+			<option value="qwerty">QWERTY</option>
+			<option value="azerty">AZERTY</option>
+			<option value="dvorak">Dvorak</option>
+			<option value="pdvorak">Programmer Dvorak</option>
+			<option value="colemak" selected>Colemak</option>
+			<option value="bepo">bépo</option>
+			<option value="workman">Workman</option>
+			<option value="norman">Norman</option>
+			<option value="arensito">Arensito Simple</option>
+			<option value="qwpr">qwpr</option>
+			<option value="asset">Asset</option>
+			<option value="mtgap2">MTGAP 2.0</option>
+			<option value="klausler">Klauser's evolver</option>
+			<option value="capewell">Capewell</option>
+			<option value="cqwerf">Capewell-QWERF</option>
+			<option value="cdvorak">Capewell-Dvorak</option>
+			<option value="minimak4">Minimak 4</option>
+			<option value="minimak8">Minimak 8</option>
+			<option value="minimak12">Minimak 12</option>
+			<option value="tarmak1">Tarmak 1</option>
+			<option value="tarmak2">Tarmak 2</option>
+			<option value="tarmak3">Tarmak 3</option>
+			<option value="tarmak4">Tarmak 4</option>
+			<option value="qfmlwy">Carpalx QFMLWY</option>
+			<option value="qgmlwb">Carpalx QGMLWB</option>
+			<option value="qgmlwy">Carpalx QGMLWY</option>
+			<option value="qwkrfy">Carpalx QWKRFY</option>
+			<option value="qwyrfm">Carpalx QWYRFM</option>
+			<option value="carpalxq">CarpalxQ</option>
+			<option value="tnwmlc">Carpalx TNWMLC</option>
+		</select>
+		<textarea id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
+	</div>
+	<%- @partial('contents') %>
+	<%- @partial('scripts') %>
+</body>
+</html>

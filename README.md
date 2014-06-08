@@ -49,6 +49,7 @@ docpad run
 ##Planned features
 
 - AltGr support
+- Dead key support
 - Custom hard layouts (ISO, ErgoDox, TypeMatrix, Maltron...)
 - Colorized keys per finger
 - Import/Export/Edit layouts

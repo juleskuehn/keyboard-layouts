@@ -197,6 +197,9 @@ genKB = (layout) ->
 				newRow += '<div class="label">' + key.toUpperCase() + '</div>'
 			else for label, l in key
 				newRow += '<div class="label layer'+l+'">' + label + '</div>'
+			# add homing 'ridges' to (qwerty) F and J keys
+			if r is 1 and (k is 3 or k is 5)
+				newRow += '<div class="homing"></div>'
 			newRow += '</div></div>'
 		newRow += '</div>'
 		keyboard += newRow

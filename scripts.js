@@ -85,7 +85,7 @@
             newRow += '<div class="label layer' + l + '">' + label + '</div>';
           }
         }
-        if (r === 1 && (k === 3 || k === 5)) {
+        if (r === 2 && (k === 3 || k === 6)) {
           newRow += '<div class="homing"></div>';
         }
         newRow += '</div></div>';

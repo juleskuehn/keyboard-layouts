@@ -312,6 +312,9 @@ genKB = (layout) ->
 				newRow += ' layers2'
 			newRow += '" id="key'+r+'-'+k+'" style="width:'+(key*57-1)+'px">'
 			newRow += '<div class="keyinner" style="width:'+(key*57-13)+'px">'
+			# add homing 'ridges' to (qwerty) F and J keys
+			if r is 2 and (k is 4 or k is 6)
+				newRow += '<div class="homing"></div>'
 			for i in [1..6]
 				newRow += '<input type="text" class="label layer'+i+'"></input>'
 			newRow += '</div></div>'

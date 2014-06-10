@@ -198,7 +198,7 @@ genKB = (layout) ->
 			else for label, l in key
 				newRow += '<div class="label layer'+l+'">' + label + '</div>'
 			# add homing 'ridges' to (qwerty) F and J keys
-			if r is 1 and (k is 3 or k is 5)
+			if r is 2 and (k is 3 or k is 6)
 				newRow += '<div class="homing"></div>'
 			newRow += '</div></div>'
 		newRow += '</div>'

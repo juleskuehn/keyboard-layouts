@@ -1,1 +1,1 @@
-<%- @getBlock("scripts").add(["vendor/all.min.js","scripts.js"]).toHTML() %>
+<%- @getBlock("scripts").add(["vendor/all.min.js","vendor/jquery-ui-1.10.4.custom.min.js","scripts.js"]).toHTML() %>

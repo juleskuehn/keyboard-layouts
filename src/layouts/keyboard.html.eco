@@ -1,15 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Try Keyboard Layouts in Browser</title>
+	<title>Try Keyboard Layouts</title>
 	<%- @partial('headNoTitle') %>
 </head>
 <body>
 	<%- @partial('title') %>
 	<div id="keyStuff">
-		<div id="keyboard"></div>
-		<br />
-		<label>Your keyboard layout:</label>
+		<label>Keyboard type:</label>
+		<select id="layout">
+			<option value="ANSI" selected>ANSI (US)</option>
+			<option value="ISO">ISO (EU)</option>
+			<option value="JP">Japanese</option>
+		</select>
+		<label>Your layout:</label>
 		<select id="source">
 			<option value="qwerty" selected>QWERTY</option>
 			<option value="azerty">AZERTY</option>
@@ -42,7 +46,7 @@
 			<option value="carpalxq">CarpalxQ</option>
 			<option value="tnwmlc">Carpalx TNWMLC</option>
 		</select>
-		<label>Try this layout (above):</label>
+		<label>Try layout (below):</label>
 		<select id="target">
 			<option value="qwerty">QWERTY</option>
 			<option value="azerty">AZERTY</option>
@@ -75,6 +79,18 @@
 			<option value="carpalxq">CarpalxQ</option>
 			<option value="tnwmlc">Carpalx TNWMLC</option>
 		</select>
+		<br />
+		<input type="checkbox" id="trackpointCheckbox" />
+		<label>Trackpoint</label>
+		<select id="layers">
+			<option value='2'>2</option>
+			<option value='4'>4</option>
+			<option value='6'>6</option>
+		</select>
+		<label>layers on this key</label>
+		<a href="#">Edit</a> / <a href="#">New</a> / <a href="#">Save</a>
+		<br /><br />
+		<div id="keyboard"></div>
 		<textarea id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
 	</div>
 	<%- @partial('contents') %>

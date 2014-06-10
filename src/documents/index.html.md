@@ -1,5 +1,5 @@
 ---
-title: "Keyboard Layouts"
+title: "Keyboard Layout Tool"
 layout: "keyboard"
 ---
 

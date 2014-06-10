@@ -21,19 +21,7 @@ lightGrey = #aaa
 // base sizes
 
 html
-	font-size 100%
-	
-	@media screen and (min-width:1024px)
-		font-size 114%
-
-	@media screen and (min-width:1440px)
-		font-size 126.7%
-
-	@media screen and (min-width:1800px)
-		font-size 143%
-
-	@media screen and (min-width:2500px)
-		font-size 190%
+	font-size 114%
 
 lineH = 1.45rem
 
@@ -49,7 +37,7 @@ body
 	color black
 	margin auto
 	position relative
-	max-width 36rem
+	max-width 855px
 
 	@media screen and (min-width:768px)
 		padding 3*lineH 0
@@ -253,72 +241,186 @@ img
 keySize = 3rem
 
 #keyboard
-	width 13*keySize
+	width 855px
+	height 285px
 	position relative
-	left -0.4*keySize
-	height 4*keySize
-	padding-bottom 6px
+	left -1px
+	background #333
+	padding 1px 0 0 1px
+	border-radius 5px
 	.row
-		position absolute
-		height keySize
-	#row1
-		margin-left 0.5*keySize
-		top keySize
-		padding-top 1px
-	#row2
-		margin-left 0.75*keySize
-		top 2*keySize
-		padding-top 2px
-	#row3
-		margin-left 1.25*keySize
-		top 3*keySize
-		padding-top 3px
+		float left
 	.key
 		float left
-		width keySize
-		height keySize
-		border solid 1px #333
-		border-radius 0.1*keySize
+		width 56px
+		height 56px
+		margin 0 1px 1px 0
+		border-radius 5px
 		line-height 0.4*keySize
-		font-size 0.3*keySize
 		color #222
 		position relative
 		background #ddd
-		margin-right -1px
 		.keyinner
 			position relative
-			top 0.04*keySize
-			left 0.1*keySize
-			height 0.8*keySize
-			width 0.8*keySize
+			top 2px
+			left 5px
+			height 45px
 			background #fff
-			border-radius 0.1*keySize
+			border-radius 5px
 			border solid 1px #ccc
-			margin-left -1px
-		&.pressed
-			background #aaa
+		&.dark
+			background #ccc
 			.keyinner
-				background #ddd
+				background #eaeaea
+				border-color #bbb
+		&.big.bottom
+			border-radius 0 0 5px 5px
+			margin-top -1px
+			padding-top 1px
+			.keyinner
+				margin-top -11px
+				border-top none
+				border-radius 0 0 5px 5px
+				padding-top 11px
+		&.big.top
+			border-radius 5px 5px 0 5px
+			.keyinner
+				border-radius 5px 5px 0 5px
 		.label
 			position absolute
-			left 0.07*keySize
-		.layer0
+			width 18px
+			border none
+			background none
+			font-size 0.25*keySize
+			color #aaa
+		.layer1,.layer3,.layer5
 			bottom 0
-			font-size 0.275*keySize
-		.layer1
+		.layer2,.layer4,.layer6
 			top 0
+		.layer1,.layer2
 			font-size 0.275*keySize
-
+			color #222
+			left 3px
+		.layer3,.layer4,.layer5,.layer6
+			right 3px
+			text-align right
+		&.layers1,&.layers2
+			.layer3,.layer4,.layer5,.layer6
+				display none
+			.label
+				width 90%
+		&.layers1
+			.layer2
+				display none
+			.layer1
+				top 50%
+				margin-top -20px
+				left 7px
+				font-size 76%
+		&.layers4
+			.layer5,.layer6
+				display none
+		&.layers6
+			.layer3,.layer4
+				left 50%
+				margin-left -9px
+				text-align center
+		&.spacebar
+			.label
+				text-align center
+	#tpButton1,#tpButton2,#tpButton3
+		.label
+			display none
+	&.trackpoint
+		margin-bottom 2*lineH
+		#tpButton1,#tpButton2,#tpButton3
+			.label
+				position absolute
+				width 90%
+				height 80%
+				border none
+				background none
+				font-size 0.25*keySize
+				color #222
+				display block
+				left 7px
+				font-size 76%
+		#trackpoint
+			background-image radial-gradient(10px 10px, circle cover, #e55, #b22)
+			width 20px
+			height 20px
+			position absolute
+			border-radius 10px
+			top 158px
+			left 375px
+			box-shadow 0 0 5px #fff
+			border solid 1px #333
+		#tpButton1,#tpButton3
+			width 100px
+			position absolute
+			bottom -51px
+			height 50px
+			background linear-gradient(#eee,#bbb)
+			border solid 1px #333
+			left 284px
+			border-radius 0 0 5px 5px
+			z-index 1
+			.label
+				top 0
+				left 3px
+			.stripe
+				position: absolute;
+				bottom: 3px;
+				width: 61px;
+				left: 3px;
+				height: 3px;
+				background: #cc0000;
+				
+		#tpButton3
+			left 385px
+			.label
+				right 3px
+				text-align right
+			.stripe
+				width: 62px;
+				right: 3px;
+				left: auto
+		#tpButton2
+			width 66px
+			position absolute
+			bottom -51px
+			height 44px
+			background linear-gradient(#cacaca,#eaeaea)
+			border solid 1px #333
+			left 351px
+			z-index 2
+			border-radius 5px 5px 0 0
+			.label
+				left 50%
+				margin-left -30px
+				width 60px
+				text-align center
+				bottom 0
+			.stripe
+				position: absolute;
+				top: 3px;
+				width: 57px;
+				left: 5px;
+				height: 3px;
+				border-top: dotted 3px #6655D1;
+					
+			
 #textarea
 	position relative
 	height 2.75rem
-	width 35rem
+	width 855px
 	border solid 1px #aaa
 	border-radius 3px
 	margin-top 1.375rem
+	margin-left -1px
 	padding 0.375rem
 	background whitesmoke
 	color black
 	font-size 0.3*keySize
-	overflow-y scroll
 	font-family "Open Sans", sans-serif, sans
+	margin-bottom 2*lineH

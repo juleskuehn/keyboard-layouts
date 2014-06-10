@@ -1,8 +1,8 @@
 # Layouts, as tersely as possible: no grave, tilde, slash, bar, special keys
 
 qwerty = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','e','r','t','y','u','i','o','p',['[','{'],[']','}']]
+	[['`','~'],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
+	['q','w','e','r','t','y','u','i','o','p',['[','{'],[']','}'],['\\','|']]
 	['a','s','d','f','g','h','j','k','l',[';',':'],['\'','"']]
 	['z','x','c','v','b','n','m',[',','<'],['.','>'],['/','?']]
 ]
@@ -13,8 +13,8 @@ azerty = [
 	['w','x','c','v','b','n',[',','?'],[';','.'],[':','/'],['!','§']]
 ]
 colemak = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','f','p','g','j','l','u','y',[';',':'],['[','{'],[']','}']]
+	[['`','~'],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
+	['q','w','f','p','g','j','l','u','y',[';',':'],['[','{'],[']','}'],['\\','|']]
 	['a','r','s','t','d','h','n','e','i','o',['\'','"']]
 	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
 ]
@@ -181,25 +181,146 @@ tnwmlc = [
 	['e','a','d','i','o','y','u',[',','<'],['.','>'],['/','?']]
 ]
 
+# keyboards: array, keys described by length only, 60%
+keyboards =
+	# US ANSI with super keys
+	ANSI: [
+		[1,1,1,1,1,1,1,1,1,1,1,1,1,2]
+		[1.5,1,1,1,1,1,1,1,1,1,1,1,1,1.5]
+		[1.75,1,1,1,1,1,1,1,1,1,1,1,2.25]
+		[2.25,1,1,1,1,1,1,1,1,1,1,2.75]
+		[1.25,1.25,1.25,6.25,1.25,1.25,1.25,1.25]
+	]
+	# EU ISO 105 key: 0 represents tall enter
+	ISO: [
+		[1,1,1,1,1,1,1,1,1,1,1,1,1,2]
+		[1.5,1,1,1,1,1,1,1,1,1,1,1,1,0]
+		[1.75,1,1,1,1,1,1,1,1,1,1,1,1,0]
+		[1.25,1,1,1,1,1,1,1,1,1,1,1,2.75]
+		[1.25,1.25,1.25,6.25,1.25,1.25,1.25,1.25]
+	]
+	# JP tall enter, small backspace
+	JP: [
+		[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+		[1.5,1,1,1,1,1,1,1,1,1,1,1,1,0]
+		[1.75,1,1,1,1,1,1,1,1,1,1,1,1,0]
+		[2.25,1,1,1,1,1,1,1,1,1,1,1,1.75]
+		[1.5,1,1.5,1.5,2.5,1.5,1,1,1,1,1.5]
+	]
+# layouts: object
+qwerty =
+	layout: 'ANSI'
+	keys: [
+		[ # number row
+		    code: 192
+		    char: '`'
+		    shft: '~'
+		   ,
+		    code: 49
+		    char: '1'
+		    shft: '!'
+		   ,
+		    code: 50
+		    char: '2'
+		    shft: '@'
+		   ,
+		    code: 51
+		    char: '3'
+		    shft: '#'
+		   ,
+		    code: 52
+		    char: '4'
+		    shft: '$'
+		   ,
+		    code: 53
+		    char: '5'
+		    shft: '%'
+		   ,
+		    code: 54
+		    char: '6'
+		    shft: '^'
+		   ,
+		    code: 55
+		    char: '7'
+		    shft: '&'
+		   ,
+		    code: 56
+		    char: '8'
+		    shft: '*'
+		   ,
+		    code: 57
+		    char: '9'
+		    shft: '('
+		   ,
+		    code: 48
+		    char: '0'
+		    shft: ')'
+		   ,
+		    code: 189
+		    char: '-'
+		    shft: '_'
+		   ,
+		    code: 187
+		    char: '='
+		    shft: '+'
+		   ,
+		    code: 8
+		    func: 'Backspace'
+		] # end number row
+		[ # top row (qwerty...)
+		    code: 9
+		    func: 'Tab'
+		   ,
+		    code: 65
+		    char: 'a'
+		    shft: 'A'
+		   ,
+		    code: 82
+
+		]
+	]
+
+console.log(keyboards.ANSI)
+
 # Set defaults
 source = eval($('#source').val())
 target = eval($('#target').val())
+layout = keyboards[$('#layout').val()]
 firstTry = true
 
 # Generate on screen keyboard HTML
 genKB = (layout) ->
 	keyboard = ''
+	bigKey = false
 	for row, r in layout
 		newRow = '<div class="row" id="row'+r+'">'
 		for key, k in row
-			newRow += '<div class="key" id="key'+r+'-'+k+'"><div class="keyinner">'
-			if typeof key is 'string'
-				newRow += '<div class="label">' + key.toUpperCase() + '</div>'
-			else for label, l in key
-				newRow += '<div class="label layer'+l+'">' + label + '</div>'
+			newRow += '<div class="key'
+			if key == 0 # key width of 0 indicates a big (space filling) key
+				newRow += ' big dark'
+				key = 15 - row.reduce (x,y) -> x + y # set width to remainder of row
+				if bigKey # second row of big key
+					newRow += ' bottom'
+				else # first row of big key
+					bigKey = true
+					newRow += ' top'
+			if (key > 1 and not (key > 2 and r is 4) and not (r is 1 and k > 1)) or (key < 2 and r is 4) # func keys
+				newRow += ' dark layers1'
+			else if key > 2 and r is 4 # spacebar
+				newRow += ' layers1 spacebar'
+			else # normal keys
+				newRow += ' layers2'
+			newRow += '" id="key'+r+'-'+k+'" style="width:'+(key*57-1)+'px">'
+			newRow += '<div class="keyinner" style="width:'+(key*57-13)+'px">'
+			for i in [1..6]
+				newRow += '<input type="text" class="label layer'+i+'"></input>'
 			newRow += '</div></div>'
 		newRow += '</div>'
 		keyboard += newRow
+	keyboard += '<div id="trackpoint"></div>'
+	keyboard += '<div id="tpButton1"><input type="text" class="label layer1"></input><div class="stripe"></div></div>'
+	keyboard += '<div id="tpButton2"><input type="text" class="label layer1"></input><div class="stripe"></div></div>'
+	keyboard += '<div id="tpButton3"><input type="text" class="label layer1"></input><div class="stripe"></div></div>'
 	return keyboard
 
 # Initiate Keypress.js
@@ -280,16 +401,27 @@ keyPress = (key) ->
 		sendkeys(document.getElementById('textarea'),key)
 
 # Inject initial keyboard into DOM
-$('#keyboard').html(genKB(target))
+$('#keyboard').html(genKB(layout))
 bind(source,target)
 
 # Monitor dropdowns for changes and apply
 $('#target').change(->
 	target = eval($(this).val())
-	$('#keyboard').html(genKB(target))
+	$('#keyboard').html(genKB(layout))
+	bind(source,target)
+)
+$('#layout').change(->
+	layout = keyboards[$(this).val()]
+	$('#keyboard').html(genKB(layout))
 	bind(source,target)
 )
 $('#source').change(->
 	source = eval($(this).val())
 	bind(source,target)
+)
+$('#trackpointCheckbox').change(->
+	if this.checked
+		$('#keyboard').addClass('trackpoint')
+	else
+		$('#keyboard').removeClass('trackpoint')
 )

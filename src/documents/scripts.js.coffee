@@ -1,186 +1,3 @@
-# Layouts, as tersely as possible: no grave, tilde, slash, bar, special keys
-
-qwerty = [
-	[['`','~'],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','e','r','t','y','u','i','o','p',['[','{'],[']','}'],['\\','|']]
-	['a','s','d','f','g','h','j','k','l',[';',':'],['\'','"']]
-	['z','x','c','v','b','n','m',[',','<'],['.','>'],['/','?']]
-]
-azerty = [
-	[['&','1'],['é','2'],['"','3'],['\'','4'],['(','5'],['-','6'],['è','7'],['_','8'],['ç','9'],['à','0'],[')','°'],['=','+']]
-	['a','z','e','r','t','y','u','i','o','p',['^','¨'],['$','£']]
-	['q','s','d','f','g','h','j','k','l','m',['ù','%']]
-	['w','x','c','v','b','n',[',','?'],[';','.'],[':','/'],['!','§']]
-]
-colemak = [
-	[['`','~'],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','f','p','g','j','l','u','y',[';',':'],['[','{'],[']','}'],['\\','|']]
-	['a','r','s','t','d','h','n','e','i','o',['\'','"']]
-	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
-]
-dvorak = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['[','{'],[']','}']]
-	[['\'','"'],[',','<'],['.','>'],'p','y','f','g','c','r','l',['/','?'],['=','+']]
-	['a','o','e','u','i','d','h','t','n','s',['-','_']]
-	[[';',':'],'q','j','k','x','b','m','w','v','z']
-]
-pdvorak = [
-	[['&','%'],['[','7'],['{','5'],['}','3'],['(','1'],['=','9'],['*','0'],[')','2'],['+','4'],[']','6'],['!','8'],['#','`']]
-	[[';',':'],[',','<'],['.','>'],'p','y','f','g','c','r','l',['/','?'],['@','^']]
-	['a','o','e','u','i','d','h','t','n','s',['-','_']]
-	[['\'','"'],'q','j','k','x','b','m','w','v','z']
-]
-workman = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','d','r','w','b','j','f','u','p',[';',':'],['[','{'],[']','}']]
-	['a','s','h','t','g','y','n','e','o','i',['\'','"']]
-	['z','x','m','c','v','k','l',[',','<'],['.','>'],['/','?']]
-]
-norman = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','d','f','k','j','u','r','l',[';',':'],['[','{'],[']','}']]
-	['a','s','e','t','g','y','n','i','o','h',['\'','"']]
-	['z','x','c','v','b','p','m',[',','<'],['.','>'],['/','?']]
-]
-bepo = [
-	[['"','1'],['«','2'],['»','3'],['(','4'],[')','5'],['@','6'],['+','7'],['-','8'],['/','9'],['*','0'],['=','°'],['%','`']]
-	['b',['é','É'],'p','o',['è','È'],['^','!'],'v','d','l','j','z','w']
-	['a','u','i','e',[',',';'],'c','t','s','r','n','m']
-	[['à','À'],'y','x',['.',':'],'k',['\'','?'],'q','g','h','f']
-]
-arensito = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['/','?'],['=','+']]
-	['q','l',[',','<'],'p',['\'','"'],[';',':'],'f','u','d','k',['[','{'],[']','}']]
-	['a','r','e','n','b','g','s','i','t','o',['-','_']]
-	['z','w',['.','>'],'h','j','v','c','y','m','x']
-]
-qwpr = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','p','r','f','y','u','k','l',[';',':'],['[','{'],[']','}']]
-	['a','s','d','t','g','h','n','i','o','e',['\'','"']]
-	['z','x','c','v','b','j','m',[',','<'],['.','>'],['/','?']]
-]
-asset = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','j','f','g','y','p','u','l',[';',':'],['[','{'],[']','}']]
-	['a','s','e','t','d','h','n','i','o','r',['\'','"']]
-	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
-]
-mtgap2 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','<'],['0','>'],['-','_'],['=','+']]
-	[[',','('],'f','h','d','k','j','c','u','l',['.',')'],['[','{'],[']','}']]
-	['o','a','n','t','g','m','s','e','r','i',['/','?']]
-	['q','x','b','p','z','y','w',['\'','"'],'v',[';',':']]
-]
-klausler = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['k',[',','<'],'u','y','p','w','l','m','f','c',['[','{'],[']','}']]
-	['o','a','e','i','d','r','n','t','h','s',['/','?']]
-	['q',['.','>'],['\'','"'],[';',':'],'z','x','v','g','b','j']
-]
-cqwerf = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','e','r','f','j','y','l','k',[';',':'],['[','{'],[']','}']]
-	['a','s','d','t','g','h','u','o','i','p',['\'','"']]
-	['z','x','c','v','b','n','m',[',','<'],['.','>'],['/','?']]
-]
-cdvorak = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['[','{'],[']','}']]
-	[['\'','"'],[',','<'],['.','>'],'p','y','q','f','g','r','k',['/','?'],['=','+']]
-	['o','a','e','i','u','d','h','t','n','s',['-','_']]
-	['z','x','c','v','j','l','m','w','b',[';',':']]
-]
-capewell = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['[','{'],[']','}']]
-	[['.','>'],'y','w','d','f','j','p','l','u','q',['/','?'],['=','+']]
-	['a','e','r','s','g','b','t','n','i','o',['-','_']]
-	['x','z','c','v',[';',':'],'k','m','h',[',','<'],['\'','"']]
-]
-minimak4 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','d','r','k','y','u','i','o','p',['[','{'],[']','}']]
-	['a','s','t','f','g','h','j','e','l',[';',':'],['\'','"']]
-	['z','x','c','v','b','n','m',[',','<'],['.','>'],['/','?']]
-]
-minimak8 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','d','r','k','y','u','i','l','p',['[','{'],[']','}']]
-	['a','s','t','f','g','h','n','e','o',[';',':'],['\'','"']]
-	['z','x','c','v','b','j','m',[',','<'],['.','>'],['/','?']]
-]
-minimak12 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','d','f','k','y','u','i','l',[';',':'],['[','{'],[']','}']]
-	['a','s','t','r','g','h','n','e','o','p',['\'','"']]
-	['z','x','c','v','b','j','m',[',','<'],['.','>'],['/','?']]
-]
-tarmak1 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','j','r','t','y','u','i','o','p',['[','{'],[']','}']]
-	['a','s','d','f','g','h','n','e','l',[';',':'],['\'','"']]
-	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
-]
-tarmak2 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','f','r','g','y','u','i','o','p',['[','{'],[']','}']]
-	['a','s','d','t','j','h','n','e','l',[';',':'],['\'','"']]
-	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
-]
-tarmak3 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','f','j','g','y','u','i','o','p',['[','{'],[']','}']]
-	['a','r','s','t','d','h','n','e','l',[';',':'],['\'','"']]
-	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
-]
-tarmak4 = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','f','p','g','j','u','i','y',[';',':'],['[','{'],[']','}']]
-	['a','r','s','t','d','h','n','e','l','o',['\'','"']]
-	['z','x','c','v','b','k','m',[',','<'],['.','>'],['/','?']]
-]
-qfmlwy = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','f','m','l','w','y','u','o','b','j',['[','{'],[']','}']]
-	['d','s','t','n','r','i','a','e','h',[';',':'],['\'','"']]
-	['z','v','g','c','x','p','k',[',','<'],['.','>'],['/','?']]
-]
-qgmlwb = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','g','m','l','w','b','y','u','v',[';',':'],['[','{'],[']','}']]
-	['d','s','t','n','r','i','a','e','o','h',['\'','"']]
-	['z','x','c','f','j','k','p',[',','<'],['.','>'],['/','?']]
-]
-qgmlwy = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','g','m','l','w','y','f','u','b',[';',':'],['[','{'],[']','}']]
-	['d','s','t','n','r','i','a','e','o','h',['\'','"']]
-	['z','x','c','v','j','k','p',[',','<'],['.','>'],['/','?']]
-]
-qwkrfy = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','k','r','f','y','u','i','j','p',['[','{'],[']','}']]
-	['d','s','a','t','n','h','o','e','l',[';',':'],['\'','"']]
-	['z','x','c','v','b','g','m',[',','<'],['.','>'],['/','?']]
-]
-qwyrfm = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','y','r','f','m','l','u','b','p',['[','{'],[']','}']]
-	['d','s','a','t','n','h','o','e','i',[';',':'],['\'','"']]
-	['z','x','c','v','j','g','k',[',','<'],['.','>'],['/','?']]
-]
-carpalxq = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['q','w','k','r','f','y','u','l','p',[';',':'],['[','{'],[']','}']]
-	['a','s','d','t','g','h','n','e','i','o',['\'','"']]
-	['z','x','c','v','b','j','m',[',','<'],['.','>'],['/','?']]
-]
-tnwmlc = [
-	[['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],['-','_'],['=','+']]
-	['t','n','w','m','l','c','b','p','r','h',['[','{'],[']','}']]
-	['s','g','x','j','f','k','q','z','v',[';',':'],['\'','"']]
-	['e','a','d','i','o','y','u',[',','<'],['.','>'],['/','?']]
-]
-
 # keyboards: array, keys described by length only, 60%
 keyboards =
 	# US ANSI with super keys
@@ -207,127 +24,81 @@ keyboards =
 		[2.25,1,1,1,1,1,1,1,1,1,1,1,1.75]
 		[1.5,1,1.5,1.5,2.5,1.5,1,1,1,1,1.5]
 	]
-# layouts: object
-qwerty =
-	layout: 'ANSI'
-	keys: [
-		[ # number row
-		    code: 192
-		    char: '`'
-		    shft: '~'
-		   ,
-		    code: 49
-		    char: '1'
-		    shft: '!'
-		   ,
-		    code: 50
-		    char: '2'
-		    shft: '@'
-		   ,
-		    code: 51
-		    char: '3'
-		    shft: '#'
-		   ,
-		    code: 52
-		    char: '4'
-		    shft: '$'
-		   ,
-		    code: 53
-		    char: '5'
-		    shft: '%'
-		   ,
-		    code: 54
-		    char: '6'
-		    shft: '^'
-		   ,
-		    code: 55
-		    char: '7'
-		    shft: '&'
-		   ,
-		    code: 56
-		    char: '8'
-		    shft: '*'
-		   ,
-		    code: 57
-		    char: '9'
-		    shft: '('
-		   ,
-		    code: 48
-		    char: '0'
-		    shft: ')'
-		   ,
-		    code: 189
-		    char: '-'
-		    shft: '_'
-		   ,
-		    code: 187
-		    char: '='
-		    shft: '+'
-		   ,
-		    code: 8
-		    func: 'Backspace'
-		] # end number row
-		[ # top row (qwerty...)
-		    code: 9
-		    func: 'Tab'
-		   ,
-		    code: 65
-		    char: 'a'
-		    shft: 'A'
-		   ,
-		    code: 82
 
-		]
-	]
-
-console.log(keyboards.ANSI)
+qwerty = []
+colemak = []
 
 # Set defaults
 source = eval($('#source').val())
 target = eval($('#target').val())
 layout = keyboards[$('#layout').val()]
 firstTry = true
+mode = 'type'
 
 # Generate on screen keyboard HTML
 genKB = (layout) ->
 	keyboard = ''
 	bigKey = false
 	for row, r in layout
-		newRow = '<div class="row" id="row'+r+'">'
 		for key, k in row
-			newRow += '<div class="key'
+			newKey = '<li class="key'
 			if key == 0 # key width of 0 indicates a big (space filling) key
-				newRow += ' big dark'
+				newKey += ' big dark'
 				key = 15 - row.reduce (x,y) -> x + y # set width to remainder of row
 				if bigKey # second row of big key
-					newRow += ' bottom'
+					newKey += ' bottom'
 				else # first row of big key
 					bigKey = true
-					newRow += ' top'
+					newKey += ' top'
 			if (key > 1 and not (key > 2 and r is 4) and not (r is 1 and k > 1)) or (key < 2 and r is 4) # func keys
-				newRow += ' dark layers1'
+				newKey += ' dark layers1'
 			else if key > 2 and r is 4 # spacebar
-				newRow += ' layers1 spacebar'
+				newKey += ' layers1 spacebar'
 			else # normal keys
-				newRow += ' layers2'
-			newRow += '" id="key'+r+'-'+k+'" style="width:'+(key*57-1)+'px">'
-			newRow += '<div class="keyinner" style="width:'+(key*57-13)+'px">'
+				newKey += ' layers2'
+			newKey += '" id="key'+r+'-'+k+'" style="width:'+(key*57-1)+'px">'
+			newKey += '<div class="keyinner" style="width:'+(key*57-13)+'px">'
 			# add homing 'ridges' to (qwerty) F and J keys
-			if r is 3 and (k is 4 or k is 7)
-				newRow += '<div class="homing"></div>'
+			if r is 2 and (k is 4 or k is 7)
+				newKey += '<div class="homing"></div>'
 			for i in [1..6]
-				newRow += '<input type="text" class="label layer'+i+'"></input>'
-			newRow += '</div></div>'
-		newRow += '</div>'
-		keyboard += newRow
+				newKey += '<input type="text" class="label layer'+i+'"></input>'
+			newKey += '</div><div class="label-cover"></div></li>'
+			console.log(newKey)
+			keyboard += newKey
 	keyboard += '<div id="trackpoint"></div>'
-	keyboard += '<div id="tpButton1"><input type="text" class="label layer1"></input><div class="stripe"></div></div>'
-	keyboard += '<div id="tpButton2"><input type="text" class="label layer1"></input><div class="stripe"></div></div>'
-	keyboard += '<div id="tpButton3"><input type="text" class="label layer1"></input><div class="stripe"></div></div>'
+	for i in [1..3]
+		keyboard += '<li id="tpButton'+i+'"><input type="text" class="label layer1"></input><div class="stripe"></div></li>'
 	return keyboard
 
-# Initiate Keypress.js
-kp = new window.keypress.Listener()
+$('#edit').click(->
+	$('#type,#select').removeClass('on')
+	$(this).addClass('on')
+	$('#keyboard').removeClass('type').removeClass('select')
+	$('#keyboard').addClass('edit')
+	mode = 'edit'
+	$("#keyboard").selectable("destroy")
+	$('#keyboard .key.ui-selected').removeClass('ui-selected')
+)
+
+$('#type').click(->
+	$('#edit,#select').removeClass('on')
+	$(this).addClass('on')
+	$('#keyboard').removeClass('edit').removeClass('select')
+	$('#keyboard').addClass('type')
+	mode = 'type'
+	$("#keyboard").selectable("destroy")
+	$('#keyboard .key.ui-selected').removeClass('ui-selected')
+)
+
+$('#select').click(->
+	$('#edit,#type').removeClass('on')
+	$(this).addClass('on')
+	$('#keyboard').removeClass('edit').removeClass('type')
+	$('#keyboard').addClass('select')
+	mode = 'select'
+	$( "#keyboard" ).selectable({ autoRefresh: false, filter: "li.key", appendTo: "body" })
+)
 
 # Initiate sendkeys
 sendkeys = (element,keys) ->
@@ -343,65 +114,11 @@ lowerShelf = []
 
 # Generate bindings with Keypress.js
 bind = (source,target) ->
-	kp.reset()
-	lowerShelf = []
-	for row, r in source
-		for key, k in row
-			do (key,target,r,k) ->
-				targetKey = target[r][k]
-				keyLower =
-					on_keyup : ->
-						$('#key'+r+'-'+k).removeClass('pressed')
-					is_exclusive: true
-				keyUpper =
-					on_keyup : ->
-						$('#key'+r+'-'+k).removeClass('pressed')
-					prevent_default: true
-				if typeof key is 'string' # alpha source
-					keyLower.keys = key
-					keyUpper.keys = 'shift '+key
-				else
-					keyLower.keys = key[0]
-					keyUpper.keys = key[1]
-				if typeof targetKey is 'string' # alpha target
-					keyLower.on_keydown = ->
-						$('#key'+r+'-'+k).addClass('pressed')
-						keyPress(targetKey)
-					keyUpper.on_keydown = ->
-						$('#key'+r+'-'+k).addClass('pressed')
-						keyPress(targetKey.toUpperCase())
-				else
-					lowerShelf += targetKey[0]
-					keyLower.on_keydown = ->
-						$('#key'+r+'-'+k).addClass('pressed')
-						keyPress(targetKey[0])
-					keyUpper.on_keydown = ->
-						$('#key'+r+'-'+k).addClass('pressed')
-						keyPress(targetKey[1])
-				kp.register_many([keyLower,keyUpper])
-	# track shift
-	shift =
-		keys: 'shift'
-		on_keyup: ->
-			shiftPressed = false
-		on_keydown: ->
-			shiftPressed = true
-		prevent_default: true
-	kp.register_combo(shift)
-	return
+	# do something
 
 # Emulate keypress to the textarea
 keyPress = (key) ->
-	# Clear instruction text first
-	text = $('#textarea')
-	if firstTry
-		text.html('')
-		firstTry = false
-	# Write the character to textarea
-	if shiftPressed and ( key.match(/^[a-z]+$/) or key in lowerShelf )
-		return # to prevent Aa Bb Cc bug
-	else
-		sendkeys(document.getElementById('textarea'),key)
+	# do something
 
 # Inject initial keyboard into DOM
 $('#keyboard').html(genKB(layout))

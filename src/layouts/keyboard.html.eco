@@ -5,95 +5,97 @@
 	<%- @partial('headNoTitle') %>
 </head>
 <body>
-	<%- @partial('title') %>
-	<div id="keyStuff">
-		<label>Keyboard type:</label>
-		<select id="layout">
-			<option value="ANSI" selected>ANSI (US)</option>
-			<option value="ISO">ISO (EU)</option>
-			<option value="JP">Japanese</option>
-		</select>
-		<label>Your layout:</label>
-		<select id="source">
-			<option value="qwerty" selected>QWERTY</option>
-			<option value="azerty">AZERTY</option>
-			<option value="dvorak">Dvorak</option>
-			<option value="pdvorak">Programmer Dvorak</option>
-			<option value="colemak">Colemak</option>
-			<option value="bepo">bépo</option>
-			<option value="workman">Workman</option>
-			<option value="norman">Norman</option>
-			<option value="arensito">Arensito Simple</option>
-			<option value="qwpr">qwpr</option>
-			<option value="asset">Asset</option>
-			<option value="mtgap2">MTGAP 2.0</option>
-			<option value="klausler">Klauser's evolver</option>
-			<option value="capewell">Capewell</option>
-			<option value="cqwerf">Capewell-QWERF</option>
-			<option value="cdvorak">Capewell-Dvorak</option>
-			<option value="minimak4">Minimak 4</option>
-			<option value="minimak8">Minimak 8</option>
-			<option value="minimak12">Minimak 12</option>
-			<option value="tarmak1">Tarmak 1</option>
-			<option value="tarmak2">Tarmak 2</option>
-			<option value="tarmak3">Tarmak 3</option>
-			<option value="tarmak4">Tarmak 4</option>
-			<option value="qfmlwy">Carpalx QFMLWY</option>
-			<option value="qgmlwb">Carpalx QGMLWB</option>
-			<option value="qgmlwy">Carpalx QGMLWY</option>
-			<option value="qwkrfy">Carpalx QWKRFY</option>
-			<option value="qwyrfm">Carpalx QWYRFM</option>
-			<option value="carpalxq">CarpalxQ</option>
-			<option value="tnwmlc">Carpalx TNWMLC</option>
-		</select>
-		<label>Try layout (below):</label>
-		<select id="target">
-			<option value="qwerty">QWERTY</option>
-			<option value="azerty">AZERTY</option>
-			<option value="dvorak">Dvorak</option>
-			<option value="pdvorak">Programmer Dvorak</option>
-			<option value="colemak" selected>Colemak</option>
-			<option value="bepo">bépo</option>
-			<option value="workman">Workman</option>
-			<option value="norman">Norman</option>
-			<option value="arensito">Arensito Simple</option>
-			<option value="qwpr">qwpr</option>
-			<option value="asset">Asset</option>
-			<option value="mtgap2">MTGAP 2.0</option>
-			<option value="klausler">Klauser's evolver</option>
-			<option value="capewell">Capewell</option>
-			<option value="cqwerf">Capewell-QWERF</option>
-			<option value="cdvorak">Capewell-Dvorak</option>
-			<option value="minimak4">Minimak 4</option>
-			<option value="minimak8">Minimak 8</option>
-			<option value="minimak12">Minimak 12</option>
-			<option value="tarmak1">Tarmak 1</option>
-			<option value="tarmak2">Tarmak 2</option>
-			<option value="tarmak3">Tarmak 3</option>
-			<option value="tarmak4">Tarmak 4</option>
-			<option value="qfmlwy">Carpalx QFMLWY</option>
-			<option value="qgmlwb">Carpalx QGMLWB</option>
-			<option value="qgmlwy">Carpalx QGMLWY</option>
-			<option value="qwkrfy">Carpalx QWKRFY</option>
-			<option value="qwyrfm">Carpalx QWYRFM</option>
-			<option value="carpalxq">CarpalxQ</option>
-			<option value="tnwmlc">Carpalx TNWMLC</option>
-		</select>
-		<br />
-		<input type="checkbox" id="trackpointCheckbox" />
-		<label>Trackpoint</label>
-		<select id="layers">
-			<option value='2'>2</option>
-			<option value='4'>4</option>
-			<option value='6'>6</option>
-		</select>
-		<label>layers on this key</label>
-		<a href="#">Edit</a> / <a href="#">New</a> / <a href="#">Save</a>
-		<br /><br />
-		<div id="keyboard"></div>
-		<textarea id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
+	<div id="container">
+		<%- @partial('title') %>
+		<div id="keyStuff">
+			<label>Keyboard type:</label>
+			<select id="layout">
+				<option value="ANSI" selected>ANSI (US)</option>
+				<option value="ISO">ISO (EU)</option>
+				<option value="JP">Japanese</option>
+			</select>
+			<label>Your layout:</label>
+			<select id="source">
+				<option value="qwerty" selected>QWERTY</option>
+				<option value="azerty">AZERTY</option>
+				<option value="dvorak">Dvorak</option>
+				<option value="pdvorak">Programmer Dvorak</option>
+				<option value="colemak">Colemak</option>
+				<option value="bepo">bépo</option>
+				<option value="workman">Workman</option>
+				<option value="norman">Norman</option>
+				<option value="arensito">Arensito Simple</option>
+				<option value="qwpr">qwpr</option>
+				<option value="asset">Asset</option>
+				<option value="mtgap2">MTGAP 2.0</option>
+				<option value="klausler">Klauser's evolver</option>
+				<option value="capewell">Capewell</option>
+				<option value="cqwerf">Capewell-QWERF</option>
+				<option value="cdvorak">Capewell-Dvorak</option>
+				<option value="minimak4">Minimak 4</option>
+				<option value="minimak8">Minimak 8</option>
+				<option value="minimak12">Minimak 12</option>
+				<option value="tarmak1">Tarmak 1</option>
+				<option value="tarmak2">Tarmak 2</option>
+				<option value="tarmak3">Tarmak 3</option>
+				<option value="tarmak4">Tarmak 4</option>
+				<option value="qfmlwy">Carpalx QFMLWY</option>
+				<option value="qgmlwb">Carpalx QGMLWB</option>
+				<option value="qgmlwy">Carpalx QGMLWY</option>
+				<option value="qwkrfy">Carpalx QWKRFY</option>
+				<option value="qwyrfm">Carpalx QWYRFM</option>
+				<option value="carpalxq">CarpalxQ</option>
+				<option value="tnwmlc">Carpalx TNWMLC</option>
+			</select>
+			<label>Try layout (below):</label>
+			<select id="target">
+				<option value="qwerty">QWERTY</option>
+				<option value="azerty">AZERTY</option>
+				<option value="dvorak">Dvorak</option>
+				<option value="pdvorak">Programmer Dvorak</option>
+				<option value="colemak" selected>Colemak</option>
+				<option value="bepo">bépo</option>
+				<option value="workman">Workman</option>
+				<option value="norman">Norman</option>
+				<option value="arensito">Arensito Simple</option>
+				<option value="qwpr">qwpr</option>
+				<option value="asset">Asset</option>
+				<option value="mtgap2">MTGAP 2.0</option>
+				<option value="klausler">Klauser's evolver</option>
+				<option value="capewell">Capewell</option>
+				<option value="cqwerf">Capewell-QWERF</option>
+				<option value="cdvorak">Capewell-Dvorak</option>
+				<option value="minimak4">Minimak 4</option>
+				<option value="minimak8">Minimak 8</option>
+				<option value="minimak12">Minimak 12</option>
+				<option value="tarmak1">Tarmak 1</option>
+				<option value="tarmak2">Tarmak 2</option>
+				<option value="tarmak3">Tarmak 3</option>
+				<option value="tarmak4">Tarmak 4</option>
+				<option value="qfmlwy">Carpalx QFMLWY</option>
+				<option value="qgmlwb">Carpalx QGMLWB</option>
+				<option value="qgmlwy">Carpalx QGMLWY</option>
+				<option value="qwkrfy">Carpalx QWKRFY</option>
+				<option value="qwyrfm">Carpalx QWYRFM</option>
+				<option value="carpalxq">CarpalxQ</option>
+				<option value="tnwmlc">Carpalx TNWMLC</option>
+			</select>
+			<br />
+			<input type="checkbox" id="trackpointCheckbox" />
+			<label>Trackpoint</label>
+			<select id="layers">
+				<option value='2'>2</option>
+				<option value='4'>4</option>
+				<option value='6'>6</option>
+			</select>
+			<label>layers on this key</label>
+			<a href="#" id="type" class="on">Try Layout</a> / <a href="#" id="edit">Edit Keycaps</a> / <a href="#" id="select">Select Keys</a>
+			<br /><br />
+			<ul id="keyboard"></ul>
+			<textarea id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
+		</div>
+		<%- @partial('contents') %>
+		<%- @partial('scripts') %>
 	</div>
-	<%- @partial('contents') %>
-	<%- @partial('scripts') %>
 </body>
 </html>

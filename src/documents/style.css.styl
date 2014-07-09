@@ -122,10 +122,17 @@ ul
 	margin-bottom 2*lineH
 
 li 
-	list-style circle
+	list-style disc
 	margin-left 1.7rem
 	position relative
 	top 0.2rem
+
+li ul
+	margin-bottom 0
+
+li ul li
+	list-style circle
+	top 0
 
 time
 	color lightGrey
@@ -320,7 +327,7 @@ keySize = 3rem
 
 #textarea
 	position relative
-	height 2.75rem
+	height 135px
 	width 35rem
 	border solid 1px #aaa
 	border-radius 3px

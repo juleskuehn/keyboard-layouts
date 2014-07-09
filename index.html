@@ -16,7 +16,7 @@
 
 	<p>
 		<time>
-			June 10, 2014
+			July 9, 2014
 		</time>
 	</p>
 	<div id="keyStuff">
@@ -91,16 +91,38 @@
 		<textarea id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
 	</div>
 		<!-- Content -->
-	<p>This keyboard layout testing tool was designed for English layouts and ANSI keyboards only.  Due to demand from European users I am adding some features to accomodate ISO keyboards and non-English layouts.  Check back soon!</p>
-<h2 id="bug-fixes-underway">Bug fixes underway</h2>
+	<h2 id="limitations">Limitations</h2>
+<p>This keyboard layout testing tool was designed for English layouts and ANSI keyboards.  While I have attempted to accomodate non-English layouts, please be aware of the following limitations:</p>
 <ul>
-<li>&quot;-&quot; and &quot;=&quot; keys do not fire for some users</li>
-<li>bépo-&gt;qwerty and azerty-&gt;qwerty number row</li>
-<li>qwerty-&gt;bépo and qwerty-&gt;azerty accentuated keys</li>
-<li>altGr and dead keys support</li>
+<li>Dead keys are not recognized, nor are the characters produced with them.<ul>
+<li>Support for capturing and emulating dead keys could be added in the future.</li>
+</ul>
+</li>
+<li>AltGr is not supported, preventing further implementation of NEO.<ul>
+<li>Browsers cannot differentiate between the two Alt, Shift, Ctrl, and Super keys.</li>
+</ul>
+</li>
+<li>Keys whose location vary between ISO and ANSI have been purposefully omitted.</li>
+</ul>
+<h2 id="known-bugs">Known bugs</h2>
+<ul>
+<li>&quot;-&quot; and &quot;=&quot; keys do not fire for some users (I cannot replicate this behaviour).</li>
+<li>&quot;{&quot; will not print when target layout is Programmer Dvorak.</li>
+<li>Strange behaviour when source layout has a non-numeric number row (ex.&nbsp;Programmer Dvorak, AZERTY, bépo)</li>
+</ul>
+<h2 id="what-s-next-">What&#39;s next?</h2>
+<p>The branch &quot;morekeys&quot; on GitHub aims to address many of the above issues, while adding several features:</p>
+<ul>
+<li>ISO, ANSI, and Japanese layouts for the on-screen keyboard<ul>
+<li>Some thumb keys in the Japanese layout are not passed to the browser.</li>
+</ul>
+</li>
+<li>Editable keyboard layouts (type desired characters on keycap labels)</li>
+<li>Support for multiple layers with selectable modifier keys</li>
+<li>Trackpoint buttons as thumb keys</li>
 </ul>
 <h2 id="contribute">Contribute</h2>
-<p>Report bugs, request features and contribute layouts on <a href="https://github.com/mikekuehn/keyboard-layouts/">github</a>.</p>
+<p>Report bugs, request features and contribute layouts on <a href="https://github.com/mikekuehn/keyboard-layouts/">GitHub</a>.</p>
 
 	<script defer="defer"  src="vendor/all.min.js"></script><script defer="defer"  src="scripts.js"></script>
 </body>

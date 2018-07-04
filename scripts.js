@@ -105,11 +105,12 @@
   };
 
   shiftPressed = false;
+  ctrlPressed = false;
 
   lowerShelf = [];
 
   bind = function(source, target) {
-    var k, key, r, row, shift, _fn, _i, _j, _len, _len1;
+    var k, key, r, row, shift, ctrl, _fn, _i, _j, _len, _len1;
     kp.reset();
     lowerShelf = [];
     for (r = _i = 0, _len = source.length; _i < _len; r = ++_i) {
@@ -174,9 +175,21 @@
       prevent_default: true
     };
     kp.register_combo(shift);
+    ctrl = {
+      keys: 'ctrl',
+      on_keyup: function() {
+        return ctrlPressed = false;
+      },
+      on_keydown: function() {
+        return ctrlPressed = true;
+      },
+      prevent_default: true
+    };
+    kp.register_combo(ctrl);
   };
 
   keyPress = function(key) {
+    if (ctrlPressed) return true;
     var text;
     text = $('#textarea');
     if (firstTry) {
@@ -204,5 +217,11 @@
     source = eval($(this).val());
     return bind(source, target);
   });
+
+  $("#textarea")
+    .bind("focus", function() { kp.listen(); })
+    .bind("blur", function() { kp.stop_listening(); });
+
+  $("#textarea").focus();
 
 }).call(this);

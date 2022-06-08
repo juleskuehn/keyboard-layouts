@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title p-name" itemprop="name headline">Try a new keyboard layout!</h1>
+          <p class="post-meta">
+            <time class="dt-published" datetime="2020-07-25T18:26:00-04:00" itemprop="datePublished">Jul 25, 2020
+            </time>
+          </p>
+        </header>
+
+        <div class="post-content e-content" itemprop="articleBody">
+          <div id="keyStuff">
+            <div id="keyboard"></div>
+            <br />
+            <label>Your keyboard layout:</label>
+            <select id="source">
+              <option value="qwerty" selected="">QWERTY</option>
+              <option value="azerty">AZERTY</option>
+              <option value="dvorak">Dvorak</option>
+              <option value="pdvorak">Programmer Dvorak</option>
+              <option value="colemak">Colemak</option>
+              <option value="bepo">bépo</option>
+              <option value="workman">Workman</option>
+              <option value="norman">Norman</option>
+              <option value="arensito">Arensito Simple</option>
+              <option value="qwpr">qwpr</option>
+              <option value="asset">Asset</option>
+              <option value="mtgap2">MTGAP 2.0</option>
+              <option value="klausler">Klauser's evolver</option>
+              <option value="capewell">Capewell</option>
+              <option value="cqwerf">Capewell-QWERF</option>
+              <option value="cdvorak">Capewell-Dvorak</option>
+              <option value="minimak4">Minimak 4</option>
+              <option value="minimak8">Minimak 8</option>
+              <option value="minimak12">Minimak 12</option>
+              <option value="tarmak1">Tarmak 1</option>
+              <option value="tarmak2">Tarmak 2</option>
+              <option value="tarmak3">Tarmak 3</option>
+              <option value="tarmak4">Tarmak 4</option>
+              <option value="qfmlwy">Carpalx QFMLWY</option>
+              <option value="qgmlwb">Carpalx QGMLWB</option>
+              <option value="qgmlwy">Carpalx QGMLWY</option>
+              <option value="qwkrfy">Carpalx QWKRFY</option>
+              <option value="qwyrfm">Carpalx QWYRFM</option>
+              <option value="carpalxq">CarpalxQ</option>
+              <option value="tnwmlc">Carpalx TNWMLC</option>
+            </select>
+            <label>Try this layout (above):</label>
+            <select id="target">
+              <option value="qwerty">QWERTY</option>
+              <option value="azerty">AZERTY</option>
+              <option value="dvorak">Dvorak</option>
+              <option value="pdvorak">Programmer Dvorak</option>
+              <option value="colemak" selected="">Colemak</option>
+              <option value="bepo">bépo</option>
+              <option value="workman">Workman</option>
+              <option value="norman">Norman</option>
+              <option value="arensito">Arensito Simple</option>
+              <option value="qwpr">qwpr</option>
+              <option value="asset">Asset</option>
+              <option value="mtgap2">MTGAP 2.0</option>
+              <option value="klausler">Klauser's evolver</option>
+              <option value="capewell">Capewell</option>
+              <option value="cqwerf">Capewell-QWERF</option>
+              <option value="cdvorak">Capewell-Dvorak</option>
+              <option value="minimak4">Minimak 4</option>
+              <option value="minimak8">Minimak 8</option>
+              <option value="minimak12">Minimak 12</option>
+              <option value="tarmak1">Tarmak 1</option>
+              <option value="tarmak2">Tarmak 2</option>
+              <option value="tarmak3">Tarmak 3</option>
+              <option value="tarmak4">Tarmak 4</option>
+              <option value="qfmlwy">Carpalx QFMLWY</option>
+              <option value="qgmlwb">Carpalx QGMLWB</option>
+              <option value="qgmlwy">Carpalx QGMLWY</option>
+              <option value="qwkrfy">Carpalx QWKRFY</option>
+              <option value="qwyrfm">Carpalx QWYRFM</option>
+              <option value="carpalxq">CarpalxQ</option>
+              <option value="tnwmlc">Carpalx TNWMLC</option>
+            </select>
+            <textarea
+              id="textarea">Try a new keyboard layout!  Type something while looking at the keyboard above.</textarea>
+          </div>
+
+          <style type="text/css">
+            #keyboard {
+              width: 39rem;
+              position: relative;
+              left: 0;
+              height: 12rem;
+              padding-bottom: 6px;
+            }
+
+            #keyboard .row {
+              position: absolute;
+              height: 3rem;
+            }
+
+            #keyboard #row1 {
+              margin-left: 1.5rem;
+              top: 3rem;
+              padding-top: 1px;
+            }
+
+            #keyboard #row2 {
+              margin-left: 2.25rem;
+              top: 6rem;
+              padding-top: 2px;
+            }
+
+            #keyboard #row3 {
+              margin-left: 3.75rem;
+              top: 9rem;
+              padding-top: 3px;
+            }
+
+            #keyboard .key {
+              float: left;
+              width: 3rem;
+              height: 3rem;
+              border: solid 1px #333;
+              border-radius: 0.3rem;
+              line-height: 1.2rem;
+              font-size: 0.9rem;
+              color: #222;
+              position: relative;
+              background: #ddd;
+              margin-right: -1px;
+            }
+
+            #keyboard .key .keyinner {
+              position: relative;
+              top: 0.12rem;
+              left: 0.3rem;
+              height: 2.4rem;
+              width: 2.4rem;
+              background: #fff;
+              border-radius: 0.3rem;
+              border: solid 1px #ccc;
+              margin-left: -1px;
+            }
+
+            #keyboard .key .keyinner .homing {
+              position: absolute;
+              bottom: 10px;
+              left: 50%;
+              height: 0;
+              width: 14px;
+              margin-left: -7px;
+              border-top: solid 1px #eee;
+              border-bottom: solid 1px #aaa;
+            }
+
+            #keyboard .key.pressed {
+              background: #aaa;
+            }
+
+            #keyboard .key.pressed .keyinner {
+              background: #ddd;
+            }
+
+            #keyboard .key .label {
+              position: absolute;
+              left: 0.21rem;
+            }
+
+            #keyboard .key .layer0 {
+              bottom: 0;
+              font-size: 0.825rem;
+            }
+
+            #keyboard .key .layer1 {
+              top: 0;
+              font-size: 0.825rem;
+            }
+
+            #textarea {
+              position: relative;
+              height: 135px;
+              width: 35rem;
+              border: solid 1px #aaa;
+              border-radius: 3px;
+              margin-top: 1.375rem;
+              padding: 0.375rem;
+              background: #f5f5f5;
+              color: #222;
+              font-size: 0.9rem;
+              overflow-y: scroll;
+              font-family: "Open Sans", sans-serif, sans;
+            }
+          </style>
+
+          <script src="./all.min.js"></script>
+
+          <script src="./keyboard-layouts.js"></script>
+
+          <h2 id="limitations">Limitations</h2>
+          <p>This keyboard layout testing tool was designed for English layouts and ANSI keyboards. While I have
+            attempted to accomodate non-English layouts, please be aware of the following limitations:</p>
+          <ul>
+            <li>Dead keys are not recognized, nor are the characters produced with them.</li>
+            <li>Support for capturing and emulating dead keys could be added in the future.</li>
+            <li>AltGr is not supported, preventing further implementation of NEO.</li>
+            <li>Browsers cannot differentiate between the two Alt, Shift, Ctrl, and Super keys.</li>
+            <li>Keys whose location vary between ISO and ANSI have been purposefully omitted.</li>
+          </ul>
+
+          <h2 id="known-bugs">Known bugs</h2>
+          <ul>
+            <li>”-“ and “=” keys do not fire for some users (I cannot replicate this behaviour).</li>
+            <li>”{“ will not print when target layout is Programmer Dvorak.</li>
+            <li>Strange behaviour when source layout has a non-numeric number row (ex. Programmer Dvorak, AZERTY, bépo)
+            </li>
+          </ul>
+
+          <h2 id="whats-next">What’s next?</h2>
+          <p>The branch “morekeys” on GitHub aims to address many of the above issues, while adding several features:
+          </p>
+          <ul>
+            <li>ISO, ANSI, and Japanese layouts for the on-screen keyboard</li>
+            <li>Some thumb keys in the Japanese layout are not passed to the browser.</li>
+            <li>Editable keyboard layouts (type desired characters on keycap labels)</li>
+            <li>Support for multiple layers with selectable modifier keys</li>
+            <li>Trackpoint buttons as thumb keys</li>
+          </ul>
+
+          <h2 id="contribute">Contribute</h2>
+          <p>Ancient CoffeeScript source code on <a href="https://github.com/juleskuehn/keyboard-layouts/">GitHub</a>.
+          </p>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+</body>
+
+</html>

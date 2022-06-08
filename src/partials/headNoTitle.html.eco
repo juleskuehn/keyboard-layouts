@@ -1,5 +1,0 @@
-<%- @getBlock("meta").toHTML() %>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" />
-<meta name="viewport" content="width=device-width" />

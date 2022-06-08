@@ -1,1 +1,0 @@
-<%- @getBlock("scripts").add(["vendor/all.min.js","scripts.js"]).toHTML() %>

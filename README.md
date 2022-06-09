@@ -1,7 +1,9 @@
 keyboard-layouts
 ================
 
-Try alternate keyboard layouts like Colemak and Dvorak in your browser!
+<img width="805" alt="screenshot" src="https://user-images.githubusercontent.com/1150048/172737371-f40a9909-d086-4c59-b259-996a370514e5.png">
+
+[Try alternate keyboard layouts like Colemak and Dvorak in your browser!](http://juleskuehn.github.io/keyboard-layouts/)
 
 ## Supported layouts
 
